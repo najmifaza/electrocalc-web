@@ -3,63 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ElectroCalc Web - Utilitas Teknik Elektro</title>
+  <title>ElectroCalc Web - Utilitas Laboratorium Teknik Elektro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>ElectroCalc Web</h1>
-    <p>Aplikasi Kalkulator Rangkaian & Komponen Teknik Elektro</p>
+    <div class="header-top">
+      <div>
+        <h1>ElectroCalc Web</h1>
+        <p>Aplikasi Kalkulator Rangkaian & Komponen Teknik Elektro</p>
+      </div>
+      <button id="theme-toggle" class="theme-btn" title="Ganti Tema">🌓 Mode Gelap</button>
+    </div>
     <nav class="quick-nav">
       <a href="#resistor-calc" class="nav-btn">Modul Resistor 4 Warna</a>
       <a href="#ohms-law" class="nav-btn">Modul Hukum Ohm & Daya</a>
+      <a href="#history-section" class="nav-btn">Riwayat Perhitungan</a>
     </nav>
   </header>
 
   <main id="app-container">
     <!-- Modul Kalkulator Resistor 4 Pita (Dikerjakan: Khoirin Naila Rusian) -->
     <section id="resistor-calc" class="card">
-      <h2>Kalkulator Resistor (4 Gelang Warna)</h2>
+      <div class="card-header">
+        <h2>1. Kalkulator Resistor (4 Gelang Warna)</h2>
+        <span class="badge">Khoirin Naila</span>
+      </div>
       <p class="desc">Hitung resistansi dan toleransi resistor melalui pilihan kode warna gelang.</p>
       
       <div class="resistor-visual">
+        <div class="lead-wire left"></div>
         <div class="resistor-body">
           <span class="band" id="band1-box"></span>
           <span class="band" id="band2-box"></span>
           <span class="band" id="band3-box"></span>
           <span class="band" id="band4-box"></span>
         </div>
+        <div class="lead-wire right"></div>
       </div>
 
       <div class="form-grid">
         <div class="input-group">
           <label for="band1">Gelang 1 (Digit 1):</label>
           <select id="band1">
-            <option value="1" style="background:#8B4513;color:#fff;">Cokelat (1)</option>
-            <option value="2" style="background:#ff0000;color:#fff;">Merah (2)</option>
-            <option value="3" style="background:#ff8c00;color:#fff;">Oranye (3)</option>
-            <option value="4" style="background:#ffd700;color:#000;">Kuning (4)</option>
-            <option value="5" style="background:#228b22;color:#fff;">Hijau (5)</option>
-            <option value="6" style="background:#1e90ff;color:#fff;">Biru (6)</option>
-            <option value="7" style="background:#9370db;color:#fff;">Ungu (7)</option>
-            <option value="8" style="background:#808080;color:#fff;">Abu-abu (8)</option>
-            <option value="9" style="background:#ffffff;color:#000;">Putih (9)</option>
+            <option value="1">Cokelat (1)</option>
+            <option value="2">Merah (2)</option>
+            <option value="3">Oranye (3)</option>
+            <option value="4">Kuning (4)</option>
+            <option value="5">Hijau (5)</option>
+            <option value="6">Biru (6)</option>
+            <option value="7">Ungu (7)</option>
+            <option value="8">Abu-abu (8)</option>
+            <option value="9">Putih (9)</option>
           </select>
         </div>
 
         <div class="input-group">
           <label for="band2">Gelang 2 (Digit 2):</label>
           <select id="band2">
-            <option value="0" style="background:#000;color:#fff;">Hitam (0)</option>
-            <option value="1" style="background:#8B4513;color:#fff;">Cokelat (1)</option>
-            <option value="2" style="background:#ff0000;color:#fff;">Merah (2)</option>
-            <option value="3" style="background:#ff8c00;color:#fff;">Oranye (3)</option>
-            <option value="4" style="background:#ffd700;color:#000;">Kuning (4)</option>
-            <option value="5" style="background:#228b22;color:#fff;">Hijau (5)</option>
-            <option value="6" style="background:#1e90ff;color:#fff;">Biru (6)</option>
-            <option value="7" style="background:#9370db;color:#fff;">Ungu (7)</option>
-            <option value="8" style="background:#808080;color:#fff;">Abu-abu (8)</option>
-            <option value="9" style="background:#ffffff;color:#000;">Putih (9)</option>
+            <option value="0">Hitam (0)</option>
+            <option value="1">Cokelat (1)</option>
+            <option value="2">Merah (2)</option>
+            <option value="3">Oranye (3)</option>
+            <option value="4">Kuning (4)</option>
+            <option value="5">Hijau (5)</option>
+            <option value="6">Biru (6)</option>
+            <option value="7">Ungu (7)</option>
+            <option value="8">Abu-abu (8)</option>
+            <option value="9">Putih (9)</option>
           </select>
         </div>
 
@@ -100,7 +111,10 @@
 
     <!-- Modul Kalkulator Hukum Ohm (Dikerjakan: Rizky Pratama) -->
     <section id="ohms-law" class="card">
-      <h2>Kalkulator Hukum Ohm (V, I, R, P)</h2>
+      <div class="card-header">
+        <h2>2. Kalkulator Hukum Ohm (V, I, R, P)</h2>
+        <span class="badge">Rizky Pratama</span>
+      </div>
       <p class="desc">Masukkan minimal 2 nilai yang diketahui untuk menghitung variabel lainnya.</p>
 
       <div class="form-grid">
@@ -132,10 +146,26 @@
         <p id="ohm-summary">Silakan isi minimal 2 parameter dan klik Hitung.</p>
       </div>
     </section>
+
+    <!-- Modul Riwayat Perhitungan (Dikerjakan: Daffa Raihan) -->
+    <section id="history-section" class="card">
+      <div class="card-header">
+        <h2>3. Riwayat Perhitungan Sesi</h2>
+        <span class="badge">Daffa Raihan</span>
+      </div>
+      <p class="desc">Daftar perhitungan yang telah dijalankan selama sesi web aktif.</p>
+      <div class="history-controls">
+        <button id="btn-clear-history" class="secondary-btn">Hapus Riwayat</button>
+      </div>
+      <ul id="history-list" class="history-list">
+        <li class="empty-notice">Belum ada riwayat perhitungan.</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Tim Proyek Kolaboratif Git - Teknik Elektro Undip</p>
+    <p>&copy; 2026 Tim Proyek Kolaboratif Git - Teknik Elektro Universitas Diponegoro</p>
+    <p class="repo-info">Proyek Kolaboratif Git: Khoirin Naila Rusian | Rizky Pratama | Daffa Raihan</p>
   </footer>
 
   <script src="app.js"></script>
