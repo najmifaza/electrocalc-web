@@ -10,12 +10,46 @@
   <header>
     <h1>ElectroCalc Web</h1>
     <p>Aplikasi Kalkulator Rangkaian & Komponen Teknik Elektro</p>
+    <nav class="quick-nav">
+      <a href="#ohms-law" class="nav-btn">Modul Hukum Ohm & Daya</a>
+    </nav>
   </header>
 
   <main id="app-container">
-    <div id="module-placeholder">
-      <p>Modul kalkulator sedang dalam tahap integrasi.</p>
-    </div>
+    <!-- Modul Kalkulator Hukum Ohm (Dikerjakan: Rizky Pratama) -->
+    <section id="ohms-law" class="card">
+      <h2>Kalkulator Hukum Ohm (V, I, R, P)</h2>
+      <p class="desc">Masukkan minimal 2 nilai yang diketahui untuk menghitung variabel lainnya.</p>
+
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="ohm-v">Tegangan (V) - Volt:</label>
+          <input type="number" id="ohm-v" step="any" placeholder="Contoh: 12">
+        </div>
+        <div class="input-group">
+          <label for="ohm-i">Arus (I) - Ampere:</label>
+          <input type="number" id="ohm-i" step="any" placeholder="Contoh: 0.5">
+        </div>
+        <div class="input-group">
+          <label for="ohm-r">Hambatan (R) - Ohm (Ω):</label>
+          <input type="number" id="ohm-r" step="any" placeholder="Contoh: 24">
+        </div>
+        <div class="input-group">
+          <label for="ohm-p">Daya (P) - Watt:</label>
+          <input type="number" id="ohm-p" step="any" placeholder="Contoh: 6">
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button id="btn-calc-ohm" class="action-btn">Hitung Nilai</button>
+        <button id="btn-reset-ohm" class="secondary-btn">Reset</button>
+      </div>
+
+      <div class="result-box" id="ohm-result">
+        <h3>Hasil Analisis:</h3>
+        <p id="ohm-summary">Silakan isi minimal 2 parameter dan klik Hitung.</p>
+      </div>
+    </section>
   </main>
 
   <footer>
