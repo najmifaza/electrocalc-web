@@ -10,12 +10,92 @@
   <header>
     <h1>ElectroCalc Web</h1>
     <p>Aplikasi Kalkulator Rangkaian & Komponen Teknik Elektro</p>
+    <nav class="quick-nav">
+      <a href="#resistor-calc" class="nav-btn">Modul Resistor 4 Warna</a>
+    </nav>
   </header>
 
   <main id="app-container">
-    <div id="module-placeholder">
-      <p>Modul kalkulator sedang dalam tahap integrasi.</p>
-    </div>
+    <!-- Modul Kalkulator Resistor 4 Pita (Dikerjakan: Khoirin Naila Rusian) -->
+    <section id="resistor-calc" class="card">
+      <h2>Kalkulator Resistor (4 Gelang Warna)</h2>
+      <p class="desc">Hitung resistansi dan toleransi resistor melalui pilihan kode warna gelang.</p>
+      
+      <div class="resistor-visual">
+        <div class="resistor-body">
+          <span class="band" id="band1-box"></span>
+          <span class="band" id="band2-box"></span>
+          <span class="band" id="band3-box"></span>
+          <span class="band" id="band4-box"></span>
+        </div>
+      </div>
+
+      <div class="form-grid">
+        <div class="input-group">
+          <label for="band1">Gelang 1 (Digit 1):</label>
+          <select id="band1">
+            <option value="1" style="background:#8B4513;color:#fff;">Cokelat (1)</option>
+            <option value="2" style="background:#ff0000;color:#fff;">Merah (2)</option>
+            <option value="3" style="background:#ff8c00;color:#fff;">Oranye (3)</option>
+            <option value="4" style="background:#ffd700;color:#000;">Kuning (4)</option>
+            <option value="5" style="background:#228b22;color:#fff;">Hijau (5)</option>
+            <option value="6" style="background:#1e90ff;color:#fff;">Biru (6)</option>
+            <option value="7" style="background:#9370db;color:#fff;">Ungu (7)</option>
+            <option value="8" style="background:#808080;color:#fff;">Abu-abu (8)</option>
+            <option value="9" style="background:#ffffff;color:#000;">Putih (9)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="band2">Gelang 2 (Digit 2):</label>
+          <select id="band2">
+            <option value="0" style="background:#000;color:#fff;">Hitam (0)</option>
+            <option value="1" style="background:#8B4513;color:#fff;">Cokelat (1)</option>
+            <option value="2" style="background:#ff0000;color:#fff;">Merah (2)</option>
+            <option value="3" style="background:#ff8c00;color:#fff;">Oranye (3)</option>
+            <option value="4" style="background:#ffd700;color:#000;">Kuning (4)</option>
+            <option value="5" style="background:#228b22;color:#fff;">Hijau (5)</option>
+            <option value="6" style="background:#1e90ff;color:#fff;">Biru (6)</option>
+            <option value="7" style="background:#9370db;color:#fff;">Ungu (7)</option>
+            <option value="8" style="background:#808080;color:#fff;">Abu-abu (8)</option>
+            <option value="9" style="background:#ffffff;color:#000;">Putih (9)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="band3">Gelang 3 (Pengali):</label>
+          <select id="band3">
+            <option value="1" data-color="#000">Hitam (x1 Ω)</option>
+            <option value="10" data-color="#8B4513">Cokelat (x10 Ω)</option>
+            <option value="100" data-color="#ff0000">Merah (x100 Ω)</option>
+            <option value="1000" data-color="#ff8c00">Oranye (x1 kΩ)</option>
+            <option value="10000" data-color="#ffd700">Kuning (x10 kΩ)</option>
+            <option value="100000" data-color="#228b22">Hijau (x100 kΩ)</option>
+            <option value="1000000" data-color="#1e90ff">Biru (x1 MΩ)</option>
+            <option value="0.1" data-color="#ffd700">Emas (x0.1 Ω)</option>
+            <option value="0.01" data-color="#c0c0c0">Perak (x0.01 Ω)</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="band4">Gelang 4 (Toleransi):</label>
+          <select id="band4">
+            <option value="1" data-color="#8B4513">Cokelat (±1%)</option>
+            <option value="2" data-color="#ff0000">Merah (±2%)</option>
+            <option value="5" selected data-color="#d4af37">Emas (±5%)</option>
+            <option value="10" data-color="#c0c0c0">Perak (±10%)</option>
+            <option value="20" data-color="#f0f0f0">Tanpa Warna (±20%)</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="btn-calc-resistor" class="action-btn">Hitung Resistansi</button>
+
+      <div class="result-box" id="resistor-result">
+        <h3>Hasil: <span id="resistor-val">-</span></h3>
+        <p>Rentang Nilai: <span id="resistor-range">-</span></p>
+      </div>
+    </section>
   </main>
 
   <footer>
