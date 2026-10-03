@@ -6,9 +6,9 @@ Aplikasi web utilitas kalkulator teknik elektro sederhana untuk membantu perhitu
 3. **Riwayat Perhitungan (History Log)**: Menyimpan histori perhitungan sesi pengguna.
 
 ## Anggota Kelompok
-1. **Khoirin Naila Rusian** (21060123140197) - Lead / Frontend & Kalkulator Kode Warna Resistor
-2. **Rizky Pratama** (21060123140155) - Backend Logic & Kalkulator Hukum Ohm
-3. **Daffa Raihan** (21060123140182) - UI/UX Styling, Responsive Layout, & Riwayat Perhitungan
+1. **Khoirin Naila Rusian** (21060123140197) 
+2. **Rizky Pratama** (21060123140155) 
+3. **Daffa Raihan** (21060123140182) 
 
 ## Teknologi
 - HTML5
